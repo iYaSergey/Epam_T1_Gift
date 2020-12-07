@@ -12,17 +12,17 @@ namespace Gift
             gift.Add(new Gingerbread("Gingerbread",1.0,200,1));
             gift.Add(new Lollipop("Lollipop",7.5, 75,5));
 
-            Console.WriteLine($"Total weight: {gift.GetTotalWeight()}");
-            Console.WriteLine(gift);
+            Console.WriteLine($"Total weight: {gift.GetTotalWeight()}\n");
+            Console.WriteLine($"Unsorted:\n{gift}\n");
             gift.SortByName();
-            Console.WriteLine(gift);
+            Console.WriteLine($"Sorted by name:\n{gift}\n");
             gift.SortBySugar();
-            Console.WriteLine(gift);
+            Console.WriteLine($"Sorted by sugar amount:\n{gift}\n");
             gift.SortByWeight();
-            Console.WriteLine(gift);
+            Console.WriteLine($"Sorted by weight:\n{gift}\n");
             gift.SortByCount();
-            Console.WriteLine(gift);
-
+            Console.WriteLine($"Sorted by count:\n{gift}\n");
+            Console.WriteLine("Sugar range from 2 to 6:");
             gift.FindBySugarRange(2, 6).ForEach(Console.WriteLine);
         }
     }

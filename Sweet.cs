@@ -25,7 +25,7 @@ namespace Gift
 
         public override string ToString()
         {
-            return $"{Name}\nSugar: {Sugar}\nWeight: {Weight}\nCount: {Count}\n";
+            return $"{Name}\nSugar: {Sugar}\tWeight: {Weight}\tCount: {Count}";
         }
 
         private sealed class NameRelationalComparer : IComparer<Sweet>
