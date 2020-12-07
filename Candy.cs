@@ -2,7 +2,7 @@
 {
     public class Candy : Sweet
     {
-        public Candy(int sugar, int weight, int count) : base(sugar, weight, count)
+        public Candy(string name, double sugar, double weight, int count) : base(name, sugar, weight, count)
         {
 
         }
