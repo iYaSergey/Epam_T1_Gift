@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Gift
 {
@@ -23,6 +24,7 @@ namespace Gift
             Sweets.ForEach(o => weight += o.Weight * o.Count);
             return weight;
         }
+        public List<Sweet> FindBySugarRange(double min, double max) => Sweets.FindAll(o => o.Sugar >= min && o.Sugar <= max);
 
         public void Add(Sweet sweet) => Sweets.Add(sweet);
         public void Remove(Sweet sweet) => Sweets.Remove(sweet);
