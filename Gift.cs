@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Gift
 {
@@ -11,9 +12,24 @@ namespace Gift
 
         public List<Sweet> Sweets { get; }
 
-        public void Add(Sweet sweet)
+        public override string ToString()
         {
-            Sweets.Add(sweet);
+            return String.Join("\n", Sweets);
         }
+
+        public double GetTotalWeight()
+        {
+            double weight = 0;
+            Sweets.ForEach(o => weight += o.Weight * o.Count);
+            return weight;
+        }
+
+        public void Add(Sweet sweet) => Sweets.Add(sweet);
+        public void Remove(Sweet sweet) => Sweets.Remove(sweet);
+
+        public void SortByName() => Sweets.Sort(Sweet.NameComparer);
+        public void SortBySugar() => Sweets.Sort(Sweet.SugarComparer);
+        public void SortByWeight() => Sweets.Sort(Sweet.WeightComparer);
+        public void SortByCount() => Sweets.Sort(Sweet.CountComparer);
     }
 }
