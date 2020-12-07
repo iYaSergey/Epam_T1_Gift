@@ -10,5 +10,10 @@ namespace Gift
         }
 
         public List<Sweet> Sweets { get; }
+
+        public void Add(Sweet sweet)
+        {
+            Sweets.Add(sweet);
+        }
     }
 }
