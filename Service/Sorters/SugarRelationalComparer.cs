@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Gift.Model;
 
-namespace Gift.Sorters
+namespace Gift.Service.Sorters
 {
     public sealed class SugarRelationalComparer : IComparer<Sweet>
     {

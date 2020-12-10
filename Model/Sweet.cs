@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Gift.Service.Sorters;
 
 namespace Gift.Model
 {
@@ -9,10 +10,10 @@ namespace Gift.Model
         public double Weight { get; }
         public int Count { get; }
 
-        public static IComparer<Sweet> NameComparer { get; } = new Sorters.NameRelationalComparer();
-        public static IComparer<Sweet> SugarComparer { get; } = new Sorters.SugarRelationalComparer();
-        public static IComparer<Sweet> CountComparer { get; } = new Sorters.CountRelationalComparer();
-        public static IComparer<Sweet> WeightComparer { get; } = new Sorters.WeightRelationalComparer();
+        public static IComparer<Sweet> NameComparer { get; } = new NameRelationalComparer();
+        public static IComparer<Sweet> SugarComparer { get; } = new SugarRelationalComparer();
+        public static IComparer<Sweet> CountComparer { get; } = new CountRelationalComparer();
+        public static IComparer<Sweet> WeightComparer { get; } = new WeightRelationalComparer();
         public override string ToString()
         {
             return $"{Name}\nSugar: {Sugar}\tWeight: {Weight}\tCount: {Count}";
