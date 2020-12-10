@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Gift.Model;
 
 namespace Gift.Sorters
 {

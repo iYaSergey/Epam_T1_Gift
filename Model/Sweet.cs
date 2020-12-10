@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Gift
+namespace Gift.Model
 {
     public abstract class Sweet
     {
-        protected Sweet(string name, double sugar, double weight, int count)
-        {
-            Name = name;
-            Sugar = sugar;
-            Weight = weight;
-            Count = count;
-        }
-
         public string Name { get; }
         public double Sugar { get; }
         public double Weight { get; }
@@ -22,10 +13,17 @@ namespace Gift
         public static IComparer<Sweet> SugarComparer { get; } = new Sorters.SugarRelationalComparer();
         public static IComparer<Sweet> CountComparer { get; } = new Sorters.CountRelationalComparer();
         public static IComparer<Sweet> WeightComparer { get; } = new Sorters.WeightRelationalComparer();
-
         public override string ToString()
         {
             return $"{Name}\nSugar: {Sugar}\tWeight: {Weight}\tCount: {Count}";
+        }
+
+        protected Sweet(string name, double sugar, double weight, int count)
+        {
+            Name = name;
+            Sugar = sugar;
+            Weight = weight;
+            Count = count;
         }
     }
 }

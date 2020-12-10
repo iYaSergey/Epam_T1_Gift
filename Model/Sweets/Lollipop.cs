@@ -1,4 +1,4 @@
-﻿namespace Gift
+﻿namespace Gift.Model.Sweets
 {
     public class Lollipop : Sweet
     {
